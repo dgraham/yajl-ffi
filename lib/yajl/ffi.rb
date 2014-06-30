@@ -8,7 +8,7 @@ module Yajl
   module FFI
     extend ::FFI::Library
 
-    ffi_lib 'yajl'
+    ffi_lib ['yajl', 'libyajl.so.2']
 
     enum :status, [
       :ok,

@@ -610,7 +610,7 @@ describe Yajl::FFI::Parser do
     # is available. The \xC3 byte is the first byte of the é character.
     it 'rejects a partial two byte utf-8 string' do
       expected = [:start_document, :start_array, :error]
-      assert_equal expected, events('["\xC3"]')
+      assert_equal expected, events("[\"\xC3\"]")
     end
 
     it 'parses valid two byte utf-8 string' do
@@ -632,12 +632,12 @@ describe Yajl::FFI::Parser do
 
     it 'rejects one byte of three byte utf-8 string' do
       expected = [:start_document, :start_array, :error]
-      assert_equal expected, events('["\xE2"]')
+      assert_equal expected, events("[\"\xE2\"]")
     end
 
     it 'rejects two bytes of three byte utf-8 string' do
       expected = [:start_document, :start_array, :error]
-      assert_equal expected, events('["\xE2\x98"]')
+      assert_equal expected, events("[\"\xE2\x98\"]")
     end
 
     it 'parses full three byte utf-8 string' do
@@ -658,17 +658,17 @@ describe Yajl::FFI::Parser do
 
     it 'rejects one byte of four byte utf-8 string' do
       expected = [:start_document, :start_array, :error]
-      assert_equal expected, events('["\xF0"]')
+      assert_equal expected, events("[\"\xF0\"]")
     end
 
     it 'rejects two bytes of four byte utf-8 string' do
       expected = [:start_document, :start_array, :error]
-      assert_equal expected, events('["\xF0\x90"]')
+      assert_equal expected, events("[\"\xF0\x90\"]")
     end
 
     it 'rejects three bytes of four byte utf-8 string' do
       expected = [:start_document, :start_array, :error]
-      assert_equal expected, events('["\xF0\x90\x84"]')
+      assert_equal expected, events("[\"\xF0\x90\x84\"]")
     end
 
     it 'parses full four byte utf-8 string' do

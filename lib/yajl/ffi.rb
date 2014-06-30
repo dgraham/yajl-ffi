@@ -1,5 +1,6 @@
 require 'ffi'
 require 'stringio'
+require 'yajl/ffi/builder'
 require 'yajl/ffi/parser'
 
 module Yajl

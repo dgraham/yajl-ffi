@@ -1,4 +1,6 @@
 require 'ffi'
+require 'stringio'
+require 'yajl/ffi/parser'
 
 module Yajl
   module FFI

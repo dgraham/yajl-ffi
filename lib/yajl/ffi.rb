@@ -2,6 +2,7 @@ require 'ffi'
 require 'stringio'
 require 'yajl/ffi/builder'
 require 'yajl/ffi/parser'
+require 'yajl/ffi/version'
 
 module Yajl
   module FFI

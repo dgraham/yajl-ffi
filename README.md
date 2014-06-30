@@ -23,11 +23,10 @@ obj = Yajl::FFI::Parser.parse(json)
 ```
 
 While it's possible to do this with Yajl::FFI, we should really use the
-standard library's [json]([json](https://github.com/flori/json)
-gem for documents like this. It's faster because it doesn't need to generate
-events and notify observers each time the parser changes state. It parses and
-builds the Ruby object entirely in native code and hands it back to us, fully
-formed.
+standard library's [json](https://github.com/flori/json) gem for documents
+like this. It's faster because it doesn't need to generate events and notify
+observers each time the parser changes state. It parses and builds the Ruby
+object entirely in native code and hands it back to us, fully formed.
 
 For larger documents, we can use an IO object to stream it into the parser.
 We still need room for the parsed object, but the document itself is never

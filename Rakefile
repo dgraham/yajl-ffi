@@ -2,6 +2,8 @@ require 'rake'
 require 'rake/clean'
 require 'rake/testtask'
 
+load './lib/yajl/ffi/tasks/benchmark.rake'
+
 CLOBBER.include('pkg')
 
 directory 'pkg'

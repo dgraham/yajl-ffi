@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.name        = 'yajl-ffi'
   s.version     = Yajl::FFI::VERSION
   s.summary     = %q[A streaming JSON parser that generates SAX-like events.]
-  s.description = %q[Ruby FFI bindings to the native YAJL JSON parser.]
+  s.description = %q[Ruby FFI bindings to the native YAJL streaming JSON parser.]
 
   s.authors      = ['David Graham']
   s.email        = %w[david.malcom.graham@gmail.com]

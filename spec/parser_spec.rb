@@ -452,6 +452,11 @@ describe Yajl::FFI::Parser do
     end
 
     describe 'parsing unicode escapes with surrogate pairs' do
+      it 'converts missing second pair to question mark' do
+        expected = [:start_document, :start_array, [:value, '?'], :end_array, :end_document]
+        assert_equal expected, events('["\uD834"]')
+      end
+
       it 'rejects missing first pair' do
         expected = [:start_document, :start_array, :error]
         assert_equal expected, events('["\uDD1E"]')

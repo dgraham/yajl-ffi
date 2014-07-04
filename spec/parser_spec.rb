@@ -483,6 +483,12 @@ describe Yajl::FFI::Parser do
         assert_equal expected, events('["\uDD1E"]')
       end
 
+      it 'rejects double first pair' do
+        skip 'yajl incorrectly allows this'
+        expected = [:start_document, :start_array, :error]
+        assert_equal expected, events('["\uD834\uD834"]')
+      end
+
       it 'rejects double second pair' do
         expected = [:start_document, :start_array, :error]
         assert_equal expected, events('["\uDD1E\uDD1E"]')

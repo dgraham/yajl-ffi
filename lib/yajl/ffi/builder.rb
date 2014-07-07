@@ -36,13 +36,15 @@ module Yajl
 
       def end_object
         return if @stack.size == 1
-        node = @stack.pop
 
-        case @stack.last
+        node = @stack.pop
+        top = @stack[-1]
+
+        case top
         when Hash
-          @stack.last[@keys.pop] = node
+          top[@keys.pop] = node
         when Array
-          @stack.last << node
+          top << node
         end
       end
       alias :end_array :end_object
@@ -56,11 +58,12 @@ module Yajl
       end
 
       def value(value)
-        case @stack.last
+        top = @stack[-1]
+        case top
         when Hash
-          @stack.last[@keys.pop] = value
+          top[@keys.pop] = value
         when Array
-          @stack.last << value
+          top << value
         else
           @stack << value
         end

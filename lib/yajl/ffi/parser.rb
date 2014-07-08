@@ -287,7 +287,7 @@ module Yajl
       #
       # Returns a String.
       def extract(pointer, length)
-        string = pointer.read_string(length)
+        string = pointer.get_bytes(0, length)
         string.force_encoding(Encoding::UTF_8)
         unless string.valid_encoding?
           raise ParserError, 'Invalid UTF-8 byte sequence'

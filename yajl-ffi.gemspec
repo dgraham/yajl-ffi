@@ -16,6 +16,8 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
 
   s.add_dependency 'ffi', '~> 1.9'
+  s.add_development_dependency 'bundler', '~> 1.14'
+  s.add_development_dependency 'minitest', '~> 5.10'
   s.add_development_dependency 'rake', '~> 10.3'
 
   s.required_ruby_version = '>= 1.9.3'

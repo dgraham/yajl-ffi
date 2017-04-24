@@ -150,6 +150,6 @@ describe Yajl::FFI::Builder do
     assert_equal 'rails', subject.result['name']
     assert_equal 4223, subject.result['owner']['id']
     assert_equal false, subject.result['fork']
-    assert_equal nil, subject.result['mirror_url']
+    assert_nil subject.result['mirror_url']
   end
 end

@@ -11,8 +11,7 @@ Gem::Specification.new do |s|
   s.homepage     = 'https://github.com/dgraham/yajl-ffi'
   s.license      = 'MIT'
 
-  s.files        = Dir['[A-Z]*', 'yajl-ffi.gemspec', '{lib}/**/*']
-  s.test_files   = Dir['spec/**/*']
+  s.files        = Dir['[A-Z]*', 'yajl-ffi.gemspec', '{lib}/**/*'] - ['Gemfile.lock']
   s.require_path = 'lib'
 
   s.add_dependency 'ffi', '~> 1.9'

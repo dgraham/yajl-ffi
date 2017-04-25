@@ -174,6 +174,13 @@ are the best options. If you need to stream, and incrementally parse, pieces of 
 large document in constant memory space, yajl-ffi and json-stream are good
 choices.
 
+## Development
+
+```
+$ bin/setup
+$ bin/rake test
+```
+
 ## License
 
 Yajl::FFI is released under the MIT license. Check the LICENSE file for details.

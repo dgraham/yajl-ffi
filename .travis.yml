@@ -11,6 +11,7 @@ addons:
     packages:
       - libyajl2
 
+bundler_args: --without benchmark
 script: bundle exec rake test
 cache: bundler
 dist: trusty

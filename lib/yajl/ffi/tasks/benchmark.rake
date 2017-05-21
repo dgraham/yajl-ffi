@@ -1,6 +1,5 @@
 desc 'Compare parser performance'
 task :benchmark do
-  $: << './lib'
   require 'benchmark'
   require 'json'
   require 'json/stream'

@@ -152,7 +152,7 @@ This gem provides a benchmark script to test the relative performance of
 several parsers. Here's a sample run.
 
 ```
-$ rake benchmark
+$ bin/rake benchmark
                   user     system      total        real
 json          0.150000   0.010000   0.160000 (  0.158289)
 yajl-ruby     0.120000   0.010000   0.130000 (  0.116438)

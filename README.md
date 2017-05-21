@@ -154,13 +154,13 @@ several parsers. Here's a sample run.
 ```
 $ rake benchmark
                   user     system      total        real
-json          0.120000   0.010000   0.130000 (  0.130072)
-yajl-ruby     0.130000   0.000000   0.130000 (  0.129388)
-yajl-ffi      0.790000   0.010000   0.800000 (  0.805279)
-json-stream   7.500000   0.030000   7.530000 (  7.524760)
+json          0.150000   0.010000   0.160000 (  0.158289)
+yajl-ruby     0.120000   0.010000   0.130000 (  0.116438)
+yajl-ffi      0.460000   0.010000   0.470000 (  0.474199)
+json-stream   5.780000   0.030000   5.810000 (  5.800457)
 ```
 
-Yajl::FFI is about 6x slower than the pure native parsers. JSON::Stream is a
+Yajl::FFI is about 4x slower than the pure native parsers. JSON::Stream is a
 pure Ruby parser, and it performs accordingly. But it's useful in cases where
 you're unable to use native bindings or when the limiting factor is the
 network, rather than processor speed.

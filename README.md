@@ -146,11 +146,7 @@ $ ./configure
 $ make && make install
 ```
 
-## Alternatives
-
-* [json](https://github.com/flori/json)
-* [yajl-ruby](https://github.com/brianmario/yajl-ruby)
-* [json-stream](https://github.com/dgraham/json-stream)
+## Performance
 
 This gem provides a benchmark script to test the relative performance of
 several parsers. Here's a sample run.
@@ -173,6 +169,13 @@ So if you need to parse many small JSON documents, the json and yajl-ruby gems
 are the best options. If you need to stream, and incrementally parse, pieces of a
 large document in constant memory space, yajl-ffi and json-stream are good
 choices.
+
+## Alternatives
+
+* [json](https://github.com/flori/json)
+* [yajl-ruby](https://github.com/brianmario/yajl-ruby)
+* [json-stream](https://github.com/dgraham/json-stream)
+* [application/json-seq](http://www.rfc-editor.org/rfc/rfc7464.txt)
 
 ## Development
 

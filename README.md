@@ -83,8 +83,6 @@ processed in constant memory space this way.
 ## Dependencies
 
 * [libyajl2](https://github.com/lloyd/yajl)
-* ruby >= 1.9.3
-* jruby >= 1.7
 
 ## Library loading
 

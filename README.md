@@ -56,8 +56,8 @@ def post_init
   @parser.end_object     { puts "end object" }
   @parser.start_array    { puts "start array" }
   @parser.end_array      { puts "end array" }
-  @parser.key            {|k| puts "key: #{k}" }
-  @parser.value          {|v| puts "value: #{v}" }
+  @parser.key            { |k| puts "key: #{k}" }
+  @parser.value          { |v| puts "value: #{v}" }
 end
 
 def receive_data(data)

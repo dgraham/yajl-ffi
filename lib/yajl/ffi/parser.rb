@@ -8,8 +8,8 @@ module Yajl
     # Examples
     #
     #   parser = Yajl::FFI::Parser.new
-    #   parser.key {|key| puts key }
-    #   parser.value {|value| puts value }
+    #   parser.key { |key| puts key }
+    #   parser.value { |value| puts value }
     #   parser << '{"answer":'
     #   parser << ' 42}'
     class Parser
@@ -56,8 +56,8 @@ module Yajl
       #     end_object     { puts "end object" }
       #     start_array    { puts "start array" }
       #     end_array      { puts "end array" }
-      #     key            {|k| puts "key: #{k}" }
-      #     value          {|v| puts "value: #{v}" }
+      #     key            { |k| puts "key: #{k}" }
+      #     value          { |v| puts "value: #{v}" }
       #   end
       def initialize(&block)
         @listeners = {
@@ -176,9 +176,9 @@ module Yajl
       #
       # Examples
       #
-      #    # broadcast events for {"answer": 42}
+      #    # Broadcast events for {"answer": 42}
       #    notify(:start_object)
-      #    notify(:key, "answer")
+      #    notify(:key, 'answer')
       #    notify(:value, 42)
       #    notify(:end_object)
       #

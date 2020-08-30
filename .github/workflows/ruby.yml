@@ -1,0 +1,16 @@
+on: [push, pull_request]
+name: Build
+jobs:
+  test:
+    name: rake test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+      - run: |
+          sudo apt-get -yqq install libyajl2
+          gem install bundler --no-document
+          bundle install
+          bundle exec rake test

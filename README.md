@@ -152,10 +152,10 @@ several parsers. Here's a sample run.
 ```
 $ bin/rake benchmark
                   user     system      total        real
-json          0.150000   0.010000   0.160000 (  0.158289)
-yajl-ruby     0.120000   0.010000   0.130000 (  0.116438)
-yajl-ffi      0.460000   0.010000   0.470000 (  0.474199)
-json-stream   5.780000   0.030000   5.810000 (  5.800457)
+json          0.037963   0.002951   0.040914 (  0.041196)
+yajl-ruby     0.043128   0.001845   0.044973 (  0.045292)
+yajl-ffi      0.181198   0.004324   0.185522 (  0.186301)
+json-stream   2.169778   0.010984   2.180762 (  2.196817)
 ```
 
 Yajl::FFI is about 4x slower than the pure native parsers. JSON::Stream is a
